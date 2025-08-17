@@ -1,21 +1,26 @@
-import { BlogPosts } from 'app/components/posts'
+import Link from 'next/link'
 
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
+      <h1 className="mb-4 text-3xl font-semibold">
+        Hi, I'm Cindy. 👋
+        <span className="block text-gray-500 font-normal text-2xl">
+          A junior studying Computer Science at Princeton.
+        </span>
       </h1>
-      <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+      <p className="mb-4 text-lg">
+        {`I love building fast, scalable software for people. Whether it's leading a team or shipping a full-stack app, I'm passionate about using tech to make a positive impact.`}
       </p>
-      <div className="my-8">
-        <BlogPosts />
-      </div>
+      <Link
+          href="/aboutme"
+          className="text-blue-500 hover:text-blue-600"
+        >
+          About Me
+          <span className="ml-2">
+            →
+          </span>
+        </Link>
     </section>
   )
 }
